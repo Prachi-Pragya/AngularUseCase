@@ -1,0 +1,23 @@
+
+.btn-toolbar {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(152, 170, 52);
+    border-style: double;
+    padding: 10px;
+    
+  }
+  /* .btn-group mr-2{
+      margin-left: 100%;
+  } */
+  .a{
+    margin: auto; 
+  }
+  .bg{
+    background:url('/assets/images/012.jpg'); 
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    padding: 250px;
+  }
+  

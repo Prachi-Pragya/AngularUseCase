@@ -1,0 +1,103 @@
+
+<div class="container" >
+  <div class="header" >
+    <h5>
+      
+      <p class="a">
+        <img src="/assets/images/i1.jfif" alt="Italian Trulli" style="float:left;width:80px;height:80px;">
+        Library Management System</p>
+    </h5>
+  </div>
+
+  <nav class="navbar navbar-expand-lg ">
+    <!-- <a class="navbar-brand" href="registration"><i class="fa fa-home" aria-hidden="true"></i>icon here</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/Home"><i class="fa fa-home" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Contact us">Contact us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Book_Transaction
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Book Issue</a>
+            <a class="dropdown-item" href="#">Book Return</a>
+            <a class="dropdown-item" href="#">Remove Book</a>
+            <a class="dropdown-item" href="#">Search Book</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/Login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/SignUp"><i class="fa fa-user-plus" aria-hidden="true"></i>Sign Up</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  <section>
+    
+    
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form class="box" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                        <h1>Login</h1>
+                        <p class="text-muted"> Please enter your Admin login and password!</p> 
+                        <div class="form-group">
+                          <!-- <label for="email">Email</label> -->
+                          <input type="text" name="email" placeholder="Email"class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                              required email pattern="[a-z0-9._]+@[a-z]+\.[a-z]{3}$" />
+                          <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                              <div *ngIf="email.errors.required">Email is required</div>
+                              <div *ngIf="email.errors.pattern">Email must be a valid email address and format is abc@gmail.com</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <!-- <label for="password">Password</label> -->
+                          <input type="password" name="password" placeholder="Password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+                              required minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                          <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                              <div *ngIf="password.errors.required">Password is required</div>
+                              <!--<div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>-->
+                              <div *ngIf="password.errors.pattern">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or
+                                  more characters</div>
+                          </div>
+                      </div>
+                        <!-- <input type="text" name="username" placeholder="Username" required> 
+                        <input type="password" name="password" placeholder="Password" required> -->
+                         <!-- <a class="forgot text-muted" href="#">Forgot password?</a>  -->
+                          <input type="submit" name="" value="Login"  >
+                         <!-- <div class="form-group">
+                          <button class="btn btn-primary">Login</button>
+                      </div> -->
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+              
+              <img src="/assets/images/i4.jfif" alt="Girl in a jacket" width="540" height="400"> 
+            
+              </div>
+    </div>
+
+    
+     
+   
+  </section>
+  </div>

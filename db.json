@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "prachi",
+      "email": "prachi.pragya@hcl.com",
+      "password": "abs",
+      "phone": "12345",
+      "address": "pune",
+      "date of birth": "2020-12-01",
+      "id": 2
+    }
+  ],
+  "book":[
+    
+
+  ],
+
+  
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
